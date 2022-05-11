@@ -11,9 +11,11 @@ export class HomeComponent implements OnInit {
 
 
    anuncio: string = `O ${this.nomeProduto} está em promoção!`;
-   idProduto: number = 123;
-   precoProduto: number = 2.59;
+   idProduto: number = 3;
+   precoProduto: number = 2.51;
    promocao: boolean = true;
+   foto: string = 'assets/img/drake-e-josh.jpg';
+   dataValidade = '2021-12-31'
 
 
   constructor() {
@@ -27,33 +29,8 @@ export class HomeComponent implements OnInit {
     console.log('Promoção:', this.promocao);
 
 
-    let idade = 5
-    //idade = 30
-    //var é global pode muda
 
 
-
-    //let idade2 = 20
-    //idade2 = 67
-    //console.log ('idade é:', idade2)
-
-
-    /*const idade3 = 45 //nao altera
-    idade3 = 2
-    console.log ('idade:', idade3)*/
-
-
-    function imprimeIdade()
-    {
-      for (let idade = 35; idade <= 40; idade ++)
-      {
-        console.log('Minha idade dentro do for é:', idade)
-      }
-      console.log('Minha idade fora do for é:', idade)
-
-
-    }
-    imprimeIdade()
 
 
 
