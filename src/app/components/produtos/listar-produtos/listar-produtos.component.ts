@@ -17,6 +17,12 @@ export class ListarProdutosComponent implements OnInit {
     graduacao: true
   };
 
+  listaproduto: any [] = [
+    {nome: 'Curso de Angular', precoProduto: 35.56, validade: '2021-12-31', id: 1},
+    {nome: 'Curso de Ionic', precoProduto: 50, validade: '2021-12-31', id: 2},
+    {nome: 'Curso de Ionic Avançado', precoProduto: 80, validade: '2021-12-31', id: 3},
+  ];
+
   constructor() {
     for (let item of this.listaStrings)
     {
@@ -29,7 +35,7 @@ export class ListarProdutosComponent implements OnInit {
     }
 
 
- 
+
     console.log(this.objetoModelo);
     console.log(this.objetoModelo.nome);
 
