@@ -1,9 +1,47 @@
-<h1 id='angular'>
-    ANGULAR</h1><br><br>
 
-<h4 id='anuncio' class="text-danger">{{anuncio}}</h4><br>
+
+<h4 id='anuncio' class="text-danger">{{ anuncio }}</h4><br>
+
+<div class="row">
+  <div class="col">
+    <app-card-produto
+  [foto] = "foto"
+  [nomeProduto] = "nomeProduto"
+  [promocao] = "promocao"
+  [idProduto] = "idProduto"
+  [dataValidade] = "dataValidade"
+  [precoProduto] = "precoProduto"
+
+  ></app-card-produto>
+  </div>
+  <div class="col">
+      <app-card-produto
+    foto = "https://designculture.com.br/wp-content/uploads/2017/05/Grande-angular-adapt%C3%A1vel-A-2.jpg"
+    nomeProduto = "Londres"
+    [promocao] = "false"
+    [idProduto] = "34"
+    dataValidade = "2021-12-25"
+    [precoProduto] = "5000.00"
+
+  ></app-card-produto>
+</div>
+  <div class="col">
+    <app-card-produto
+  foto = "https://uploads.metropoles.com/wp-content/uploads/2022/02/18162927/Templo-Egito-1.jpg"
+  nomeProduto = "Egito"
+  [promocao] = "false"
+  [idProduto] = "34"
+  dataValidade = "2021-12-25"
+  [precoProduto] = "5000.00"
+
+></app-card-produto>
+
+  </div>
+</div>
+
+
 <br>
-<div class="container">
+ <!--<div class="container">
     <div class="row">
         <div class="col">
 
@@ -75,7 +113,7 @@
 
 
 
-    <!-- /<br><h1>Seja bem vindo ao Angular</h1><br><br>
+    /<br><h1>Seja bem vindo ao Angular</h1><br><br>
 <div class="row ">
   <div class="col ">
     <a href="https://etechoracio.com.br/has/ ">
