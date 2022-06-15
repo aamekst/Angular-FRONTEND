@@ -1,3 +1,4 @@
+import { IProduto } from './../../../model/IProduto.model';
 import { ProdutosService } from './../../../services/produtos.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -11,7 +12,7 @@ export class ListarProdutosComponent implements OnInit {
 
   listaproduto: IProduto[] = [];
 
-  constructor(private ProdutosService: ProdutosService) {
+  constructor(private produtoService: ProdutosService) {
 
    }
 
@@ -20,9 +21,27 @@ export class ListarProdutosComponent implements OnInit {
   }
 
   carregarProdutos(): void {
-    this.ProdutosService.buscarTodos().subscribe(retorno =>{
+    this.produtoService.buscarTodos().subscribe(retorno =>{
         this.listaproduto = retorno;
     })
   }
+
+  deletar(produto: IProduto): void
+  {
+    this.produtoService.excluir(produto.id!).subscribe(() =>{
+      this.produtoService.exibirMensagem(
+        'Sistema',
+        `${produto.nome} Foi excluído com sucesso!`,
+        'toast-error'
+        );
+        this.carregarProdutos();
+
+
+
+      });
+
+
+
+}
 
 }
